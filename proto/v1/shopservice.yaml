@@ -1,0 +1,13 @@
+type: google.api.Service
+config_version: 3
+
+http:
+  rules:
+    - selector: proto.v1.ShopService.CreateShop
+      post: /v1/shops
+    - selector: proto.v1.ShopService.ListShop
+      get: /v1/shops
+    - selector: proto.v1.ShopService.UpdateShop
+      put: /v1/shops
+    - selector: proto.v1.ShopService.DeleteShop
+      delete: /v1/shops

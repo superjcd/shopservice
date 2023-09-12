@@ -1,0 +1,78 @@
+syntax = "proto3";
+package proto.v1;
+
+option go_package = "github.com/HooYa-Bigdata/shopservice/genproto/v1";
+
+
+
+service ShopService {
+    rpc CreateShop(CreateShopRequest) returns (CreateShopResponse){};
+    rpc ListShop(ListShopRequest) returns (ListShopResponse){};
+    rpc UpdateShop(UpdateShopRequest) returns (UpdateShopResponse){};
+    rpc DeleteShop(DeleteShopRequest) returns (DeleteShopResponse){};
+}
+
+
+enum Status {
+    success = 0;
+    failure = 1;
+}
+
+message Shop {
+    string name = 1;
+    string brand_names = 2;
+    string country = 3;
+    string tags = 4;
+}
+
+
+message CreateShopRequest {
+    string name = 1;
+    string brand_names = 2;
+    string country = 3;
+    string tags = 4;
+}
+
+
+message CreateShopResponse {
+    string msg = 1;
+    Status status = 2;    
+    Shop shop = 3;
+    
+}
+
+message ListShopRequest {
+    string part=1;
+    int32 offset=2;
+    int32 limit=3;
+}
+
+message ListShopResponse {
+    string msg=1;
+    Status status = 2;
+    repeated Shop shops = 3; 
+}
+
+// 原则上就应该和create
+message UpdateShopRequest {
+    string name = 1;
+    string brand_names = 2;
+    string country = 3;
+    string tags= 4;
+}
+
+message UpdateShopResponse {
+    string msg=1;
+    Status status=2;
+}
+
+message DeleteShopRequest {
+    string name=1;
+}
+
+message DeleteShopResponse {
+    string msg=1;
+    Status status = 2;   
+}
+
+
