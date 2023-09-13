@@ -11,7 +11,7 @@ COMMAND = shopservice
 # =============================================================================
 
 .PHONY: all 
-all: prepare tidy test build 
+all: prepare tidy test build publish
 
 .PHONY: prepare
 prepare:
@@ -49,7 +49,7 @@ clean:
 
 
 .PHONY: publish
-push: image.build image.push
+publish: image.build image.push
 
 .PHONY: image.build 
 image.build:
