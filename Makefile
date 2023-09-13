@@ -8,7 +8,6 @@ TEST_DIRS = $(ROOT_DIR)/service/store/sql
 PLATFORMS ?=   linux_amd64 windows_amd64
 VERSION = 1.0
 COMMAND = shopservice
-
 # =============================================================================
 
 .PHONY: all 
@@ -41,7 +40,6 @@ build.%:
 	@go env -w CGO_ENABLED=0  GOOS=$(OS) GOARCH=$(ARCH)
 	@echo "====>Build binary for ${COMMAND}, with OS: $(OS), ARCH:$(ARCH)"
 	@go build -o $(OUTPUT_DIR)/$(COMMAND)_$(OS)_$(ARCH)$(EXE_SUFFIX)  $(ROOT_DIR)/cmd/
-
 
 
 .PHONY: clean

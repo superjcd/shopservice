@@ -122,8 +122,8 @@ func (s *shops) List(ctx context.Context, rq *v1.ListShopRequest) (*store.ShopLi
 }
 
 func (s *shops) Update(ctx context.Context, rq *v1.UpdateShopRequest) error <span class="cov8" title="1">{
-        shop := &amp;store.Shop{}
-        if err := s.db.Where("name = ?", rq.Name).First(shop).Error; err != nil </span><span class="cov0" title="0">{
+        shop := store.Shop{}
+        if err := s.db.Where("name = ?", rq.Name).First(&amp;shop).Error; err != nil </span><span class="cov0" title="0">{
                 return err
         }</span>
         <span class="cov8" title="1">shop.BrandNames = rq.BrandNames

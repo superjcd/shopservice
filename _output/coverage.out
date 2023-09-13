@@ -4,8 +4,8 @@ github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:30.92,34.19 3 1
 github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:34.19,36.3 1 0
 github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:36.8,38.3 1 1
 github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:40.2,48.24 2 1
-github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:51.77,53.74 2 1
-github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:53.74,55.3 1 0
+github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:51.77,53.75 2 1
+github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:53.75,55.3 1 0
 github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:56.2,59.31 4 1
 github.com/HooYa-Bigdata/shopservice/service/store/sql/shops.go:62.77,64.2 1 1
 github.com/HooYa-Bigdata/shopservice/service/store/sql/sql.go:15.46,17.2 1 1

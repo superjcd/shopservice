@@ -49,8 +49,8 @@ func (s *shops) List(ctx context.Context, rq *v1.ListShopRequest) (*store.ShopLi
 }
 
 func (s *shops) Update(ctx context.Context, rq *v1.UpdateShopRequest) error {
-	shop := &store.Shop{}
-	if err := s.db.Where("name = ?", rq.Name).First(shop).Error; err != nil {
+	shop := store.Shop{}
+	if err := s.db.Where("name = ?", rq.Name).First(&shop).Error; err != nil {
 		return err
 	}
 	shop.BrandNames = rq.BrandNames
