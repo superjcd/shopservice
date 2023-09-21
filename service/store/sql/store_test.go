@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
-	v1 "github.com/HooYa-Bigdata/shopservice/genproto/v1"
-	"github.com/HooYa-Bigdata/shopservice/service/store"
 	"github.com/glebarez/sqlite"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
+	v1 "github.com/superjcd/shopservice/genproto/v1"
+	"github.com/superjcd/shopservice/service/store"
 	"gorm.io/gorm"
 )
 
@@ -88,7 +88,7 @@ func (suite *FakeStoreTestSuite) TestUpdateShop() {
 
 }
 
-func (suite *FakeStoreTestSuite) TestZDeleteShop() {  // 添加Z的原因是希望能够靠后运行这个测试
+func (suite *FakeStoreTestSuite) TestZDeleteShop() { // 添加Z的原因是希望能够靠后运行这个测试
 	target := &v1.DeleteShopRequest{
 		Name: "apple",
 	}

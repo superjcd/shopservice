@@ -1,4 +1,4 @@
-module github.com/HooYa-Bigdata/shopservice
+module github.com/superjcd/shopservice
 
 go 1.20
 

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	v1 "github.com/HooYa-Bigdata/shopservice/genproto/v1"
-	"github.com/HooYa-Bigdata/shopservice/service/store"
+	v1 "github.com/superjcd/shopservice/genproto/v1"
+	"github.com/superjcd/shopservice/service/store"
 	"gorm.io/gorm"
 )
 

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
-	v1 "github.com/HooYa-Bigdata/shopservice/genproto/v1/gw"
-	"github.com/HooYa-Bigdata/shopservice/config"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/superjcd/shopservice/config"
+	v1 "github.com/superjcd/shopservice/genproto/v1/gw"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

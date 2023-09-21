@@ -1,7 +1,7 @@
 syntax = "proto3";
 package proto.v1;
 
-option go_package = "github.com/HooYa-Bigdata/shopservice/genproto/v1";
+option go_package = "github.com/superjcd/shopservice/genproto/v1";
 
 
 

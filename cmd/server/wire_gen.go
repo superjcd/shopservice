@@ -7,9 +7,9 @@
 package server
 
 import (
-	"github.com/HooYa-Bigdata/shopservice/config"
-	"github.com/HooYa-Bigdata/shopservice/genproto/v1"
-	"github.com/HooYa-Bigdata/shopservice/service"
+	"github.com/superjcd/shopservice/config"
+	"github.com/superjcd/shopservice/genproto/v1"
+	"github.com/superjcd/shopservice/service"
 )
 
 // Injectors from wire.go:

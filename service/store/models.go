@@ -1,7 +1,7 @@
 package store
 
 import (
-	v1 "github.com/HooYa-Bigdata/shopservice/genproto/v1"
+	v1 "github.com/superjcd/shopservice/genproto/v1"
 	"gorm.io/gorm"
 )
 
@@ -21,7 +21,7 @@ type ShopList struct {
 }
 
 func (sl *ShopList) ConvertToListShopResponse(msg string, status v1.Status) v1.ListShopResponse {
-	shops := make([]*v1.Shop, 8)
+	shops := make([]*v1.Shop, 0, 8)
 
 	for _, shop := range sl.Items {
 		shops = append(shops, &v1.Shop{

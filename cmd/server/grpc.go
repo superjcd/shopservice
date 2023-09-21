@@ -5,8 +5,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/HooYa-Bigdata/shopservice/config"
-	v1 "github.com/HooYa-Bigdata/shopservice/genproto/v1"
+	"github.com/superjcd/shopservice/config"
+	v1 "github.com/superjcd/shopservice/genproto/v1"
 	"google.golang.org/grpc"
 )
 
