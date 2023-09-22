@@ -57,7 +57,7 @@ func (suite *FakeStoreTestSuite) TestCreateShop() {
 
 func (suite *FakeStoreTestSuite) TestListShops() {
 	request := &v1.ListShopRequest{
-		Part:   "app",
+		Name:   "apple",
 		Offset: 0, // 必须要用到part,
 		Limit:  10,
 	}
@@ -78,7 +78,7 @@ func (suite *FakeStoreTestSuite) TestUpdateShop() {
 
 	// 确认一下修改是否成功
 	request := &v1.ListShopRequest{
-		Part:   "app",
+		Name:   "apple",
 		Offset: 0, // 必须要用到part,
 		Limit:  10,
 	}
@@ -97,7 +97,7 @@ func (suite *FakeStoreTestSuite) TestZDeleteShop() { // 添加Z的原因是希�
 
 	// 确认一下修改是否成功
 	request := &v1.ListShopRequest{
-		Part:   "app",
+		Name:   "apple",
 		Offset: 0, // 必须要用到part,
 		Limit:  10,
 	}

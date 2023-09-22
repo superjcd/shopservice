@@ -13,9 +13,9 @@ import (
 	"io"
 	"net/http"
 
-	extV1 "github.com/superjcd/shopservice/genproto/v1"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
+	extV1 "github.com/superjcd/shopservice/genproto/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"
@@ -190,7 +190,7 @@ func RegisterShopServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/proto.v1.ShopService/CreateShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/CreateShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -215,7 +215,7 @@ func RegisterShopServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/proto.v1.ShopService/ListShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/ListShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -240,7 +240,7 @@ func RegisterShopServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/proto.v1.ShopService/UpdateShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/UpdateShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -265,7 +265,7 @@ func RegisterShopServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/proto.v1.ShopService/DeleteShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/DeleteShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -329,7 +329,7 @@ func RegisterShopServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/proto.v1.ShopService/CreateShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/CreateShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -351,7 +351,7 @@ func RegisterShopServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/proto.v1.ShopService/ListShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/ListShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -373,7 +373,7 @@ func RegisterShopServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/proto.v1.ShopService/UpdateShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/UpdateShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -395,7 +395,7 @@ func RegisterShopServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/proto.v1.ShopService/DeleteShop", runtime.WithHTTPPathPattern("/v1/shops"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/superjcd.shopservice.v1.ShopService/DeleteShop", runtime.WithHTTPPathPattern("/v1/shops"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return

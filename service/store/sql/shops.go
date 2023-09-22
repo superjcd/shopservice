@@ -30,14 +30,22 @@ func (s *shops) Create(ctx context.Context, rq *v1.CreateShopRequest) error {
 func (s *shops) List(ctx context.Context, rq *v1.ListShopRequest) (*store.ShopList, error) {
 	result := &store.ShopList{}
 
-	var where_clause string
-	if rq.Part == "" {
-		where_clause = "1 = 1"
-	} else {
-		where_clause = fmt.Sprintf("name like '%%%s%%'", rq.Part)
+	tx := s.db
+
+	if rq.Name != "" {
+		tx = tx.Where("name = ?", rq.Name)
+	}
+	if rq.BrandName != "" {
+		tx.Where(fmt.Sprintf("brand_names like '%%%s%%'", rq.BrandName))
+	}
+	if rq.Country != "" {
+		tx = tx.Where("country = ?", rq.Country)
+	}
+	if rq.Tag != "" {
+		tx.Where(fmt.Sprintf("tags like '%%%s%%'", rq.Tag))
 	}
 
-	d := s.db.Where(where_clause).
+	d := tx.
 		Offset(int(rq.Offset)).
 		Limit(int(rq.Limit)).
 		Find(&result.Items).
@@ -60,5 +68,5 @@ func (s *shops) Update(ctx context.Context, rq *v1.UpdateShopRequest) error {
 }
 
 func (s *shops) Delete(ctx context.Context, rq *v1.DeleteShopRequest) error {
-	return s.db.Where("name = ?", rq.Name).Delete(&store.Shop{}).Error
+	return s.db.Unscoped().Where("name = ?", rq.Name).Delete(&store.Shop{}).Error
 }

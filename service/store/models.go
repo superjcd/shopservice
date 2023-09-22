@@ -9,7 +9,7 @@ import (
 
 type Shop struct {
 	gorm.Model
-	Name       string `json:"name" gorm:"column:name"`
+	Name       string `json:"name" gorm:"column:name;uniqueIndex;size:30"`
 	BrandNames string `json:"password" gorm:"column:brand_names"`
 	Country    string `json:"country" gorm:"column:country"`
 	Tags       string `json:"tags" gorm:"column:tags"`
