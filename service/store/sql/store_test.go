@@ -89,10 +89,10 @@ func (suite *FakeStoreTestSuite) TestUpdateShop() {
 }
 
 func (suite *FakeStoreTestSuite) TestZDeleteShop() { // 添加Z的原因是希望能够靠后运行这个测试
-	target := &v1.DeleteShopRequest{
+	rq := &v1.DeleteShopRequest{
 		Name: "apple",
 	}
-	err := suite.FakeFactory.Shops().Delete(context.Background(), target)
+	err := suite.FakeFactory.Shops().Delete(context.Background(), rq)
 	assert.Nil(suite.T(), err)
 
 	// 确认一下修改是否成功
