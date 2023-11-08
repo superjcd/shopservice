@@ -41,8 +41,8 @@ func (s *shops) List(ctx context.Context, rq *v1.ListShopRequest) (*store.ShopLi
 	if rq.Country != "" {
 		tx = tx.Where("country = ?", rq.Country)
 	}
-	if rq.Tag != "" {
-		tx.Where(fmt.Sprintf("tags like '%%%s%%'", rq.Tag))
+	if rq.Tags != "" {
+		tx.Where(fmt.Sprintf("tags like '%%%s%%'", rq.Tags))
 	}
 
 	d := tx.
