@@ -32,8 +32,8 @@ func (s *shops) List(ctx context.Context, rq *v1.ListShopRequest) (*store.ShopLi
 
 	tx := s.db
 
-	if rq.Name != "" {
-		tx = tx.Where("name = ?", rq.Name)
+	if rq.Names != nil {
+		tx = tx.Where("name in ?", rq.Names)
 	}
 	if rq.BrandName != "" {
 		tx.Where(fmt.Sprintf("brand_names like '%%%s%%'", rq.BrandName))
